@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting and setting content</title>
+</head>
+<body>
+    <p class="comment"></p>
+    <form action="">
+        <textarea name="comment" id="comment" cols="30" rows="5" ></textarea>
+        <button id="send_button">Comment</button>
+    </form>
+   
+
+    <script src="jquery.min.js"></script>
+    <script >
+       $(document).ready(
+           function(){
+
+            $("form").submit(
+                function(e){
+                    let comment=$("#comment").val();
+
+                    $("#send_button").click(
+                        function(){
+                            $(".comment").text(comment);
+                        }
+                    )
+
+                    e.preventDefault();
+                }
+            )
+
+        }
+       )
+    </script>
+
+</body>
+</html>

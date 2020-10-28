@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello JQuery</title>
+</head>
+<style>
+    .big{
+        font-size: 2em;
+    }
+    .heavy{
+        font-weight: bold;
+    }
+    .small{
+        font-size: 1em;
+    }
+</style>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sed magni deserunt perspiciatis reiciendis ipsa doloremque dolores impedit, assumenda voluptate atque, veritatis obcaecati, officiis velit non? Omnis reiciendis vitae non!</p>
+    <button class="increase">Make Big Text</button>
+    <button class="reduce">Reduce Text size</button>
+    <script src="jquery.min.js"></script>
+    <script >
+       $(document).ready(
+           function(){
+               $(".increase").click(
+                   function(){
+                       $("p").addClass("big heavy");
+                   }
+               )
+
+               $(".reduce").click(
+                   function(){
+                       $("p").removeClass("big");
+                       $("p").addClass("small");
+                   }
+               )
+           }
+       )
+    </script>
+
+</body>
+</html>

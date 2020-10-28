@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting By ID</title>
+</head>
+<body>
+    <div class="email-display">
+
+    </div>
+    <form action="">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <button id="show_email">Show Email</button>
+    </form>
+    
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+              $("form").submit(
+                  function(e){
+                        $("#show_email").click(
+                            function(){
+                                let email=$("input#email").val();
+
+                                let html="<p> " + email + " </p>";
+
+                                $(".email-display").html(html);
+
+                                
+                            }
+                        )
+
+                      e.preventDefault();
+                  }
+              )
+              
+            }
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting By ID</title>
+    <style>
+        .lg-text{
+            font-size: 3em;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <p class="important">
+        
+    </p>
+    <div class="desc">
+
+    </div>
+    <button id="warn">Hightlight</button>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+                $("#warn").click(
+                    function(){
+                        $(".important").text("You are alone!!");
+                        $(".important").addClass("lg-text");
+
+                        $(".desc").html("<p>Sorry for you</p>")
+                    }
+                )
+            }
+        )
+    </script>
+</body>
+</html>

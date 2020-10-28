@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Up and Down</title>
+</head>
+<style>
+    .appear{
+        display: none;
+    }
+</style>
+<body>
+    <h1>Here Lies Hidden Text</h1>
+    <div class="appear">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fugiat reprehenderit pariatur sed laboriosam debitis reiciendis sunt vero quas iusto odit quibusdam quos amet nemo optio animi, accusamus nobis necessitatibus id excepturi porro corporis voluptate? Nisi soluta, omnis doloremque molestiae quisquam, itaque beatae accusantium quam veniam, facilis iusto maiores. Aliquid praesentium amet ratione incidunt repellendus maxime, harum exercitationem dolorum fuga ab illo debitis eaque dicta consequuntur. Explicabo consequuntur similique eum earum optio error provident qui libero quibusdam dolor sunt magni nostrum, cupiditate, id voluptatibus quo expedita? At fugiat ab rem, corrupti harum corporis modi voluptatem laborum perspiciatis officiis qui in.
+    </div>
+    <button id="slide-down">Slide Down</button>
+    <button id="slide-up">Slide Up</button>
+   
+  
+    <script src="jquery.min.js"></script>
+    <script>
+        $("document").ready(
+            function(){
+                $("#slide-down").on("click",
+                function(){
+                    $(".appear").slideDown(2000);
+                })
+
+                $("#slide-up").on("click",
+                    function(){
+                        $(".appear").slideUp(2000);
+                    }
+                )
+            }
+        )
+    </script>
+</body>
+</html>

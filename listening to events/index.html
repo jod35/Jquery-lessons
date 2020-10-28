@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening to click event</title>
+</head>
+<body>
+    <p class="message">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ipsam iusto architecto doloremque magni sapiente odio est odit aspernatur. Fuga, aspernatur. Nam hic nemo quibusdam suscipit eveniet dignissimos aut pariatur?
+    </p>
+    <button id="hide">Hide Text</button>
+
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $("document").ready(
+            function(){
+                $("#hide").on('click',
+                    function(){
+                            $(".message").hide();
+                  })
+            }
+        )
+
+    </script>
+</body>
+</html>

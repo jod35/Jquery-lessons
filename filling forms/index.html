@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filling Forms</title>
+</head>
+<body>
+    <div class="email-display">
+
+    </div>
+    <form action="">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <button id="show_email">Show Email</button>
+    </form>
+    
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+              $("form").submit(
+                  function(e){
+                        $("#show_email").click(
+                            function(){
+
+                            
+                                let myemail="jodestrevin@gmail.com";
+                                $("#email").val(myemail);
+
+                                
+                            }
+                        )
+
+                      e.preventDefault();
+                  }
+              )
+              
+            }
+        )
+    </script>
+</body>
+</html>

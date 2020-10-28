@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copying Input Fields</title>
+</head>
+<body>
+    <div class="email-display">
+
+    </div>
+    <form action="">
+        <label for="email">Email 1</label>
+        <input type="email" name="email" id="email1">
+
+        <label for="email">Email 2</label>
+        <input type="email" name="email" id="email2">
+
+        <button id="show_email">Copy Email</button>
+    </form>
+    
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+                $("input#email1").val("jodestrevin@gmail.com");
+              $("form").submit(
+                  function(e){
+                    
+
+                        $("#show_email").click(
+                            function(){
+                                $("input#email2").val($("input#email1").val());
+                            }
+                        )
+
+                      e.preventDefault();
+                  }
+              )
+              
+            }
+        )
+    </script>
+</body>
+</html>

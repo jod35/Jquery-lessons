@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Styling</title>
+</head>
+<body>
+    <div class="text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt consectetur facilis, odio in minima ducimus omnis itaque blanditiis eos quibusdam, hic aut non reprehenderit nostrum! Eligendi repellendus natus incidunt at.
+    </div>
+    <button id="redify">Change to red</button>
+    <script src="jquery.min.js"></script>
+    <script>
+        $("document").ready(
+            function(){
+                $("#redify").on("click",
+                function(){
+                    $('.text').css(
+                        {
+                            "font-weight":"bold",
+                            "color":"red",
+                            "padding":"20px"
+                        }
+                    )
+                })
+            }
+        )
+    </script>
+</body>
+</html>
